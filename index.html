@@ -3,15 +3,16 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-<title>Suyukli O'g'lingiz Feruzbekdan Mo'tabar Onajonimga</title>
+<title>Aziz Dadamga — Feruzbek</title>
 
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg1: #FFD9E8;
-    --bg2: #C9A8FF;
-    --bg3: #7C4DFF;
+    /* <-- changed background palette only (darker, more "dad" vibe) */
+    --bg1: #0b1220; /* very dark navy */
+    --bg2: #0f3b66; /* deep blue */
+    --bg3: #05243a; /* deep teal/indigo */
     --white: #ffffff;
     --badge-bg: rgba(255,255,255,0.06);
   }
@@ -20,7 +21,7 @@
     height:100%;
     margin:0;
     font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 60%, var(--bg3) 100%);
+    background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 55%, var(--bg3) 100%);
     color:var(--white);
   }
 
@@ -174,7 +175,7 @@
 
    <div id="buttonWrap" style="width:100%; display:flex; justify-content:center;">
   <a id="instaBtn" class="btn" href="https://t.me/realferuzbek" target="_blank" rel="noopener noreferrer">
-    Feruzbek Ga Qayting 
+    FERUZBEK GA QAYTISH
   </a>
 </div>
 
@@ -189,40 +190,31 @@ const HEART_COUNT = 15;
 
 /* -------------- TEXT (EDIT THESE) -------------- */
 /* Welcome (single short line) */
-const welcomeText = "Suyukli O'g'lingiz Feruzbekdan Mo'tabar Onajonimga";
+const welcomeText = "FERUZBEKDAN DADAMGA";
 
 const mainParagraphs = [
   "2025-yil 29-avgust",
-"",
-"Onajonimga,",
-"",
-"Siz mening hayotimdagi eng aziz va eng muqaddas insonsiz.",
-"",
-"Sizning mehribon qo‘llaringiz, iliq nigohlaringiz va cheksiz sabr-toqatingiz tufayli men bugun shu darajaga yetdim.",
-"",
-"Siz men uchun nafaqat ona, balki eng yaqin do‘st, eng katta tayanch va hayotimning eng go‘zal mo‘’jizasiz.",
-"",
-"Sizni cheksiz hurmat qilaman, sizga bo‘lgan muhabbatimni hech bir so‘z to‘liq ifoda eta olmaydi.",
-"",
-"Sizning mehringiz dunyodagi eng katta boylikdir.",
-"",
-"Onajon, sizni qalbimdan sevaman.",
-"",
-"Sizning baxtingiz – mening baxtim. Sizni doim quvontirish, sizni faxrlantirish mening eng katta orzumdir.",
-"",
-"Meni har kuni duo qilib qo‘llab-quvvatlaganingiz uchun rahmat.",
-"",
-"Sizning duolaringiz va mehringiz meni hech qachon yo‘ldan adashtirmaydi.",
-"",
-"Men sizni umrimning oxirigacha sevaman, Onajonim.",
-"",
-"Abadiy hurmat va muhabbat bilan,",
-"Sizning farzandingiz"
+  "",
+  "DADAMGA,",
+  "",
+  "SIZ MENING HAYOTIMDAGI ENG KUCHLI POYDEVOR VA ENG ISHONCHLI YO'LBOSHCHISIZ.",
+  "",
+  "SIZNING MEHNATINGIZ, SABRINGIZ VA MAS'ULIYATINGIZ HAR KUN MENI ILHOM BILAN TO'LDIRADI.",
+  "",
+  "QANDAY QIYIN DAMLAR BO'LSA HAM, SIZ HAR DOIM YONIMDASIZ — MEN BUNI HAYOTIMDA CHEKSUZ QADRLAYMAN.",
+  "",
+  "SIZ MENGA NAFAQAT HAQIQIY OTA EMAS, BALKI ENG YAXSHI DO'ST VA NAZARIMDA QAHRAMONIMSIZ.",
+  "",
+  "SIZGA BO'LGAN MINNATDORLIGIMNI SO'ZLAR BILAN IFODA ETA OLMAYMAN, LEKIN HAR KUN SIZ UCHUN YAXSHI BO'LISHGA HARAKAT QILAMAN.",
+  "",
+  "ALLAH SIZNI DOIMO SAQLASIN VA SOG'LIQ-BAXT BERISHINI TILAYMAN.",
+  "",
+  "HAR DOIM SIZNING O'G'LINGIZ — FERUZBEK"
 ];
 
 
 /* Ending */
-const endingText = "Sizni Doimo Sevadigan O'g'lingiz Feruzbek";
+const endingText = "SIZGA CHIDAM VA MURUVVAT BILAN, FERUZBEK";
 
 /* -------------- TYPING & DISPLAY HELPERS -------------- */
 const textArea = document.getElementById('textArea');
@@ -329,7 +321,7 @@ async function runSequence(){
   // show each main paragraph one by one (subtitle style)
   for(let i=0;i<mainParagraphs.length;i++){
     const {wrapper, p, caret} = await typeAsSubtitle(mainParagraphs[i], TYPING_SPEED);
-    // pause so she reads
+    // pause so he reads
     await sleep(PAUSE_BETWEEN_PARAGRAPHS + 200);
     // remove caret before moving on
     removeGlobalCaret();
